@@ -1,5 +1,4 @@
 const http = require('http');
-const fs = require('fs');
 const countStudents = require('./3-read_file_async');
 
 const DB = process.argv[2];
@@ -12,11 +11,11 @@ const app = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     countStudents(DB)
       .then((output) => {
-	      const fullOutput = `This is the list of our students\n${output}`;
-	      res.end(fullOutput);
+        const fullOutput = `This is the list of our students\n${output}`;
+        res.end(fullOutput);
       })
       .catch((err) => {
-	      res.end(err.message);
+        res.end(err.message);
       });
   } else {
     res.writeHead(404);
