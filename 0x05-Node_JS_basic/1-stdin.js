@@ -1,5 +1,8 @@
 #!/usr/bin/node
-// Display initial welcome message
+/**
+ * This script demonstrates basic stdin/stdout interaction
+ * It asks for a name and displays it back
+ */
 process.stdout.write('Welcome to ALX, what is your name?\n');
 
 process.stdin.on('readable', () => {
