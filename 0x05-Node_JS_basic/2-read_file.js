@@ -1,3 +1,6 @@
+/*
+ * function countStudents
+ */
 const fs = require('fs');
 
 function countStudents (path) {
