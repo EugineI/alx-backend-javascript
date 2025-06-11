@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8', (err, data) => {
       if (err) {
@@ -8,8 +8,8 @@ function countStudents (path) {
         return;
       }
 
-      const lines = data.split('\n').filter(line => line.trim() !== '');
-      const students = lines.slice(1).map(line => line.split(','));
+      const lines = data.split('\n').filter((line) => line.trim() !== '');
+      const students = lines.slice(1).map((line) => line.split(','));
 
       const fields = {};
       for (const student of students) {
