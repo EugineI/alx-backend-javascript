@@ -3,10 +3,10 @@
  */
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf8');
-    const lines = data.split('\n').filter(line => line.trim() !== '');
+    const lines = data.split('\n').filter((line) => line.trim() !== '');
 
     const headers = lines.shift().split(',');
 
@@ -15,7 +15,7 @@ function countStudents (path) {
 
     const fields = {};
 
-    lines.forEach(line => {
+    lines.forEach((line) => {
       const parts = line.split(',');
       const field = parts[fieldIndex];
       const firstName = parts[firstNameIndex];
