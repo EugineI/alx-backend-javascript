@@ -4,8 +4,7 @@
   "description": "unittests in JS",
   "main": "0-calcul.js",
   "scripts": {
-    "test": "mocha \"*.test.js\"",
-    "test:file": "mocha"
+    "test": "node test.js"
   },
   "keywords": [],
   "author": "",
